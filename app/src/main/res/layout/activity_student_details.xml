@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".StudentDetailsActivity">
+
+    <TextView
+        android:id="@+id/stdDetailsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Details"
+        android:textColor="@color/orange"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/txtInputFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/orange_border"
+        android:maxLines="1"
+        android:hint="First Name"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/txtInputLastName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/orange_border"
+        android:maxLines="1"
+        android:hint="Last Name"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/txtInputContactNumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/orange_border"
+        android:maxLines="1"
+        android:hint="Contact Number"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/txtInputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/orange_border"
+        android:maxLines="1"
+        android:hint="Email Address"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/txtParentName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/orange_border"
+        android:maxLines="1"
+        android:hint="Parent Name"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/txtParentContactNumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/orange_border"
+        android:maxLines="1"
+        android:hint="Parent Contact Number"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/txtParentEmail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/orange_border"
+        android:maxLines="1"
+        android:hint="Parent Email"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnAddQualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Qualifications"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#A9A9A9"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btnAddQualification"
+            android:layout_marginTop="3dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
