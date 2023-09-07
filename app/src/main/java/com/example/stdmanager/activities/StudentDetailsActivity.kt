@@ -7,19 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 
 import com.example.stdmanager.databinding.ActivityStudentDetailsBinding
 import com.example.stdmanager.model.UserDetailModel
-import com.example.stdmanager.util.UserDetailsDatabaseHelper
+import com.example.stdmanager.util.CommonDatabaseHelper
 
 class StudentDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityStudentDetailsBinding
-    private lateinit var db : UserDetailsDatabaseHelper
+    private lateinit var db : CommonDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStudentDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        db = UserDetailsDatabaseHelper(this)
+        db = CommonDatabaseHelper(this)
 
         binding.btnAddQualification.setOnClickListener{
             var intent = Intent(this, QualificationListActivity::class.java)

@@ -6,20 +6,20 @@ import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import com.example.stdmanager.databinding.ActivityMainBinding
-import com.example.stdmanager.util.UserDatabaseHelper
+import com.example.stdmanager.util.CommonDatabaseHelper
 
 
 class MainActivity : AppCompatActivity() {
 
  private lateinit var binding: ActivityMainBinding
- private lateinit var db:UserDatabaseHelper
+ private lateinit var db:CommonDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        db = UserDatabaseHelper(this)
+        db = CommonDatabaseHelper(this)
         binding.btnLogin.setOnClickListener{
             var intent = Intent(this, StudentDetailsActivity::class.java)
 

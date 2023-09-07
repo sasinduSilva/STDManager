@@ -6,20 +6,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.stdmanager.databinding.ActivityQualificationListBinding
 import com.example.stdmanager.model.UserQualificationModel
+import com.example.stdmanager.util.CommonDatabaseHelper
 import com.example.stdmanager.util.StateClass
-import com.example.stdmanager.util.UserQualificationDatabaseHelper
 
 class QualificationListActivity:AppCompatActivity() {
 
     private lateinit var binding: ActivityQualificationListBinding
-    private lateinit var db: UserQualificationDatabaseHelper
+    private lateinit var db: CommonDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQualificationListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        db = UserQualificationDatabaseHelper(this)
+        db = CommonDatabaseHelper(this)
 
         binding.btnAddQualification.setOnClickListener{
 

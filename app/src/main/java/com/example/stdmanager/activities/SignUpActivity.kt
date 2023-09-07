@@ -1,25 +1,22 @@
 package com.example.stdmanager.activities
 
-import android.app.AlertDialog
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.stdmanager.databinding.ActivitySignupBinding
-import com.example.stdmanager.databinding.ActivityStudentDetailsBinding
 import com.example.stdmanager.model.UserModel
-import com.example.stdmanager.util.UserDatabaseHelper
+import com.example.stdmanager.util.CommonDatabaseHelper
 
 class SignUpActivity :AppCompatActivity(){
 
     private lateinit var binding: ActivitySignupBinding
-    private lateinit var db: UserDatabaseHelper
+    private lateinit var db: CommonDatabaseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        db = UserDatabaseHelper(this)
+        db = CommonDatabaseHelper(this)
 
         binding.btnSignUp.setOnClickListener {
             val email = binding.txtInputEmail.text.toString()
