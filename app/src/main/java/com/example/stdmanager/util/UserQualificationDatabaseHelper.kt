@@ -10,7 +10,7 @@ class UserQualificationDatabaseHelper(context: Context) : SQLiteOpenHelper(conte
 
     companion object{
         private const val DATABASE_NAME = "stdmanager.db"
-        private const val DATABASE_VERSION = 2
+        private const val DATABASE_VERSION = 3
         private const val TABLE_NAME = "qualificatiostable"
         private const val COLUMN_ID = "id"
         private const val COLUMN_QUALIFICATION = "qualification"

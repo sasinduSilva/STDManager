@@ -4,9 +4,9 @@ data class UserDetailModel(
     val id: Int,
     val firstName: String,
     val lastName : String,
-    val contactNumber: Number,
+    val contactNumber: String,
     val email: String,
     val parentName: String,
-    val parentContactNumber: Number,
+    val parentContactNumber: String,
     val parentEmail: String
 )
