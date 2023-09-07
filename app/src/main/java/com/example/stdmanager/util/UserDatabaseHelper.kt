@@ -28,7 +28,7 @@ class UserDatabaseHelper(context: Context) : SQLiteOpenHelper(context,DATABASE_N
         db?.execSQL(dropTableQuery)
         onCreate(db)
     }
-
+//insert user function
     fun insertUser(user: UserModel){
         val db = writableDatabase
         val values = ContentValues().apply {
@@ -39,7 +39,7 @@ class UserDatabaseHelper(context: Context) : SQLiteOpenHelper(context,DATABASE_N
         db.close()
 
     }
-
+// is user existing check function
     fun isUserExists(email:String):Boolean{
         val db = readableDatabase
         val query = "SELECT COUNT(*) FROM $TABLE_NAME WHERE $COLUMN_EMAIL = ?"
@@ -57,5 +57,19 @@ class UserDatabaseHelper(context: Context) : SQLiteOpenHelper(context,DATABASE_N
         }
 
         return count > 0
+    }
+//    Sign in function
+    fun signInUser(email: String,password:String):Boolean{
+        val db = readableDatabase
+        val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_EMAIL = ? AND $COLUMN_PASSWORD = ?"
+        val cursor = db.rawQuery(query, arrayOf(email,password))
+
+        val signedSuccess = cursor.moveToFirst()
+        cursor.close()
+        db.close()
+
+        return signedSuccess
+
+
     }
 }
