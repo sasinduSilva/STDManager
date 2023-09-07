@@ -10,7 +10,7 @@ class UserDatabaseHelper(context: Context) : SQLiteOpenHelper(context,DATABASE_N
 
     companion object{
         private const val DATABASE_NAME = "stdmanager.db"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_VERSION = 2
         private const val TABLE_NAME = "UserTable"
         private const val COLUMN_ID = "id"
         private const val COLUMN_EMAIL = "email"

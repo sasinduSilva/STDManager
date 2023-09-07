@@ -4,8 +4,9 @@ import java.sql.Date
 
 data class UserQualificationModel(
     val id: Int,
+    val qualification: String,
     val instituteName: String,
-    val startedDate: Date,
-    val endDate: Date,
+    val startedDate: String,
+    val endDate: String,
     val grade: String
 )
