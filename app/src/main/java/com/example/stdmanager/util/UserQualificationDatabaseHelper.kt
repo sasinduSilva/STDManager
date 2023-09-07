@@ -22,11 +22,10 @@ class UserQualificationDatabaseHelper(context: Context) : SQLiteOpenHelper(conte
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        println("result qualification table onCreate begins")
+
         val createTableQuery = "CREATE TABLE ${TABLE_NAME} (${COLUMN_ID} INTEGER PRIMARY KEY, ${COLUMN_QUALIFICATION} TEXT, ${COLUMN_INSTITUTENAME} TEXT,${COLUMN_STARTDATE} TEXT, ${COLUMN_ENDDATE} TEXT, ${COLUMN_GRADE} TEXT)"
-        var result = db?.execSQL(createTableQuery)
-        println("result qualification table creation")
-        println(result.toString())
+         db?.execSQL(createTableQuery)
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, newVersion: Int, oldVersion: Int) {
