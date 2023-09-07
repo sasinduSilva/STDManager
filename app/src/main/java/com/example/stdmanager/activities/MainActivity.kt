@@ -1,4 +1,4 @@
-package com.example.stdmanager
+package com.example.stdmanager.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener{
-            var intent = Intent(this,StudentDetailsActivity::class.java)
+            var intent = Intent(this, StudentDetailsActivity::class.java)
             startActivity(intent)
 
 
         }
 
         binding.btnSignUp.setOnClickListener {
-            var intent = Intent(this,SignUpActivity::class.java)
+            var intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
 
         }

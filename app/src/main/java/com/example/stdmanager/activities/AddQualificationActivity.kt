@@ -1,4 +1,4 @@
-package com.example.stdmanager
+package com.example.stdmanager.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

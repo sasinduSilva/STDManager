@@ -1,4 +1,4 @@
-package com.example.stdmanager
+package com.example.stdmanager.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +16,7 @@ class StudentDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnAddQualification.setOnClickListener{
-            var intent = Intent(this,QualificationListActivity::class.java)
+            var intent = Intent(this, QualificationListActivity::class.java)
             startActivity(intent)
             finish()
         }

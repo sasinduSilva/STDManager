@@ -1,10 +1,9 @@
-package com.example.stdmanager
+package com.example.stdmanager.activities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.stdmanager.databinding.ActivityQualificationListBinding
-import com.example.stdmanager.databinding.ActivitySignupBinding
 
 class QualificationListActivity:AppCompatActivity() {
 
@@ -17,7 +16,7 @@ class QualificationListActivity:AppCompatActivity() {
 
         binding.btnAddQualification.setOnClickListener{
 
-            var intent = Intent(this,AddQualificationActivity::class.java)
+            var intent = Intent(this, AddQualificationActivity::class.java)
             startActivity(intent)
         }
 
